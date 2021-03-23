@@ -1,5 +1,5 @@
 const url = require("../../test_data/apiURL");
-const { ClientId_0793, POST_request } = require("../../test_data/Send_data");
+const { ClientId_0793, createRequest } = require("../../test_data/Send_data");
 const { expect } = require("chai");
 const axios = require("axios");
 
@@ -120,7 +120,7 @@ describe("Trading", function () {
         //мин значение 0.00
         it("Accepts new trading requests for a specified trading pair. (BTC/EUR)", () => {
             return axios.post(
-                url.request, POST_request,
+                url.request, createRequest(0.1, "ETH", "EUR", "sell", "fdffd"),
                 {headers:
                     ClientId_0793
                 }).then(res => {

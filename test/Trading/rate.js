@@ -26,7 +26,7 @@ describe("Trading", function () {
                 })
         }),
 
-        it("Real market prices for a trading pair (BTC/BTC_USDT_ERC20)", () => {
+        it("Real market prices for a trading pair (BTC/USDT_ERC20)", () => {
             return axios.get(
                 url.rate_BTC_USDT_ERC20,
                 {headers:

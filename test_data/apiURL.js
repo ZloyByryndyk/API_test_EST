@@ -26,10 +26,10 @@ const url = {
     request_USDT_ERC20_RUB: baseURL + "requests?coin=USDT_ERC20&currencyUnit=RUB",
     request_USDT_ERC20_BTC: baseURL + "requests?coin=USDT_ERC20&currencyUnit=BTC",
 
-    requestId:"http://dev-trading-api.estchange.io/requests/843926d0-8691-11eb-86b5-0d117786fb91",
+    requestId: baseURL + "requests/843926d0-8691-11eb-86b5-0d117786fb91",
 
 //POST запросы
-    request:"http://dev-trading-api.estchange.io/requests?amount=0.1&coin=BTC&currencyUnit=EUR&tradeSide=sell"
+    request: baseURL + "requests?amount=0.1&coin=BTC&currencyUnit=EUR&tradeSide=sell"
 }
 
 module.exports = url;
