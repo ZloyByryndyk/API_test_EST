@@ -10,4 +10,4 @@ const createRequest = (amount, coin, currentlyUnit, tradeSide) => {
     }
 }
 
-module.exports = { ClientId_0793, createRequest }
+module.exports = { ClientId_0793, createRequest}

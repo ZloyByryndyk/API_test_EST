@@ -3,12 +3,12 @@ const { ClientId_0793 } = require("../../test_data/Send_data");
 const { expect } = require("chai");
 const axios = require("axios");
 
-describe("Trading", function () {
+describe("Rate", function () {
     this.timeout(5000);
 
         it("Real market prices for a trading pair (BTC/EUR)", () => {
             return axios.get(
-                url.rate_BTC_EUR,
+                url.rate("BTC","EUR"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -18,7 +18,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (BTC/RUB)", () => {
             return axios.get(
-                url.rate_BTC_RUB,
+                url.rate("BTC","RUB"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -28,7 +28,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (BTC/USDT_ERC20)", () => {
             return axios.get(
-                url.rate_BTC_USDT_ERC20,
+                url.rate("BTC","USDT_ERC20"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -38,7 +38,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (ETH/BTC)", () => {
             return axios.get(
-                url.rate_ETH_BTC,
+                url.rate("ETH","BTC"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -48,7 +48,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (ETH/EUR)", () => {
             return axios.get(
-                url.rate_ETH_EUR,
+                url.rate("ETH","EUR"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -58,7 +58,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (ETH/RUB)", () => {
             return axios.get(
-                url.rate_ETH_RUB,
+                url.rate("ETH","RUB"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -68,7 +68,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (ETH/USDT_ERC20)", () => {
             return axios.get(
-                url.rate_ETH_USDT_ERC20,
+                url.rate("ETH","USDT_ERC20"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -78,7 +78,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (USDT_ERC20/BTC)", () => {
             return axios.get(
-                url.rate_USDT_ERC20_BTC,
+                url.rate("USDT_ERC20","BTC"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -88,7 +88,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (USDT_ERC20/EUR)", () => {
             return axios.get(
-                url.rate_USDT_ERC20_EUR,
+                url.rate("USDT_ERC20","EUR"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
@@ -98,7 +98,7 @@ describe("Trading", function () {
 
         it("Real market prices for a trading pair (USDT_ERC20/RUB)", () => {
             return axios.get(
-                url.rate_USDT_ERC20_RUB,
+                url.rate("USDT_ERC20","RUB"),
                 {headers:
                     ClientId_0793
                 }).then(res => {
