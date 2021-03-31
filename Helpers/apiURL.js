@@ -1,4 +1,5 @@
 const baseURL = "http://dev-trading-api.estchange.io/"
+const baseBillingURL = "http://dev-billing-api.estchange.io/"
 
 const url = {
 //GET запросы
@@ -14,8 +15,14 @@ const url = {
 
     time: baseURL + "time",
 
+    clients: baseBillingURL + "clients",
+
 //POST запросы
-    request: (amount, coin, currentlyUnit, tradeSide) => (baseURL + `requests?amount=${amount}&coin=${coin}&currencyUnit=${currentlyUnit}&tradeSide=${tradeSide}`)
+    request: (amount, coin, currentlyUnit, tradeSide) => (baseURL + `requests?amount=${amount}&coin=${coin}&currencyUnit=${currentlyUnit}&tradeSide=${tradeSide}`),
+
+    clientsPost: (clientUid) => (baseBillingURL + `clients?clientUid=${clientUid}`)
 }
+
+    
 
 module.exports = url;

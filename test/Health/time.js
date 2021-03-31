@@ -1,5 +1,5 @@
-const url = require("../../test_data/apiURL");
-const { ClientId_0793 } = require("../../test_data/Send_data");
+const url = require("../../Helpers/apiURL");
+const { ClientId_0793 } = require("../../Helpers/Send_data");
 const { expect } = require("chai");
 const axios = require("axios");
 
