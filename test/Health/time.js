@@ -3,7 +3,7 @@ const { ClientId_0793 } = require("../../Helpers/Send_data");
 const { expect } = require("chai");
 const axios = require("axios");
 
-describe("Time", function () {
+describe("Health", function () {
     this.timeout(5000);
 
         it("Check server time", () => {

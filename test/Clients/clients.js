@@ -17,7 +17,7 @@ describe("Clients", function () {
                 })
         }),
 
-        it("Creating a client for address management ddd", () => {
+        it("Creating a client for address management", () => {
             return axios.post(
                 url.clientsPost("123"),
                 clientsData(123),
@@ -27,5 +27,17 @@ describe("Clients", function () {
                     expect(res.status).to.equal(200);
                     expect(res.data).not.to.equal(null);
                 })
+        }),
+
+        it("Get client information by ID in your account ass", () => {
+            return axios.get(
+                url.clientsId("90794c50-e13b-11ea-86ad-b33045c6c719"),
+                {headers:
+                    ClientId_0793Billing
+                }).then(res => {
+                    expect(res.status).to.equal(200);
+                    expect(res.data).not.to.equal(null);
+                })
         })
 });
+

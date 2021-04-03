@@ -21,4 +21,5 @@ const clientsData = (clientUid) => {
     }
 }
 
-module.exports = { ClientId_0793, createRequest, ClientId_0793Billing, clientsData}
+
+module.exports = { ClientId_0793, createRequest, ClientId_0793Billing, clientsData, rate}

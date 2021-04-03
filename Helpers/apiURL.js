@@ -7,6 +7,8 @@ const url = {
 
     rate: (firstCurrency, secondCurrency) => baseURL + `rate/${firstCurrency}/${secondCurrency}`,
 
+    ratePair: (pair) => baseBillingURL + `rate/${pair}`,
+
     request: (coin, currencyUnit) => baseURL + `requests?coin=${coin}&currencyUnit=${currencyUnit}`,
 
     requestId: baseURL + "requests/843926d0-8691-11eb-86b5-0d117786fb91",
@@ -16,6 +18,10 @@ const url = {
     time: baseURL + "time",
 
     clients: baseBillingURL + "clients",
+
+    clientsId: (Id) => baseBillingURL + `clients/${Id}`,
+
+    zzz: "http://dev-billing-api.estchange.io/rate/BTC%3AEUR",
 
 //POST запросы
     request: (amount, coin, currentlyUnit, tradeSide) => (baseURL + `requests?amount=${amount}&coin=${coin}&currencyUnit=${currentlyUnit}&tradeSide=${tradeSide}`),

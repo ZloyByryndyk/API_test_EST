@@ -3,7 +3,7 @@ const { ClientId_0793 } = require("../../Helpers/Send_data");
 const { expect } = require("chai");
 const axios = require("axios");
 
-describe("Balance", function () {
+describe("Trading", function () {
     this.timeout(5000);
 
         it("Returns balances of your trading account with EstChange OU.", () => {
