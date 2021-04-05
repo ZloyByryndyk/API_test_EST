@@ -19,14 +19,20 @@ const url = {
 
     clients: baseBillingURL + "clients",
 
-    clientsId: (Id) => baseBillingURL + `clients/${Id}`,
+    clientsId: (id) => baseBillingURL + `clients/${id}`,
 
-    zzz: "http://dev-billing-api.estchange.io/rate/BTC%3AEUR",
+    withdrawal: baseBillingURL + "withdrawal",
+
+    withdrawalID: (id) => baseBillingURL + `withdrawal/${id}`,
 
 //POST запросы
     request: (amount, coin, currentlyUnit, tradeSide) => (baseURL + `requests?amount=${amount}&coin=${coin}&currencyUnit=${currentlyUnit}&tradeSide=${tradeSide}`),
 
-    clientsPost: (clientUid) => (baseBillingURL + `clients?clientUid=${clientUid}`)
+    clientsPost: (clientUid) => (baseBillingURL + `clients?clientUid=${clientUid}`),
+
+    coin: (coin) => (baseBillingURL + `withdrawal/coin/${coin}`)
+
+
 }
 
     

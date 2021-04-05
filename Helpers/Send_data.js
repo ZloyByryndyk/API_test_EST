@@ -21,5 +21,10 @@ const clientsData = (clientUid) => {
     }
 }
 
+const coinBody = (address, amountType, amount, reference) => {
+    return {
+        address, amountType, amount, reference
+    }
+}
 
-module.exports = { ClientId_0793, createRequest, ClientId_0793Billing, clientsData, rate}
+module.exports = { ClientId_0793, createRequest, ClientId_0793Billing, clientsData, coinBody}

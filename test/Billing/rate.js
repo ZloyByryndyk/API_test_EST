@@ -29,9 +29,8 @@ describe("Billing", function () {
         it("Returns live market prices for the specified trading pair, including all trading margins and commissions associated with your account. (ETH%3AEUR)", () => {
             return axios.get(
                 url.ratePair("ETH%3AEUR"),
-                {
-                    headers:
-                        ClientId_0793Billing
+                {headers:
+                    ClientId_0793Billing
                 }).then(res => {
                     expect(res.status).to.equal(200);
                 })
@@ -40,9 +39,8 @@ describe("Billing", function () {
         it("Returns live market prices for the specified trading pair, including all trading margins and commissions associated with your account. (ETH%3AUSDT_ERC20)", () => {
             return axios.get(
                 url.ratePair("ETH%3AUSDT_ERC20"),
-                {
-                    headers:
-                        ClientId_0793Billing
+                {headers:
+                    ClientId_0793Billing
                 }).then(res => {
                     expect(res.status).to.equal(200);
                 })
@@ -51,9 +49,8 @@ describe("Billing", function () {
         it("Returns live market prices for the specified trading pair, including all trading margins and commissions associated with your account. (USDT_ERC20%3AEUR)", () => {
             return axios.get(
                 url.ratePair("USDT_ERC20%3AEUR"),
-                {
-                    headers:
-                        ClientId_0793Billing
+                {headers:
+                    ClientId_0793Billing
                 }).then(res => {
                     expect(res.status).to.equal(200);
                 })
